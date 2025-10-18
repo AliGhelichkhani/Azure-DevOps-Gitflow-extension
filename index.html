@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GitFlow Azure DevOps Extension</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/vss-web-extension-sdk/lib/VSS.SDK.min.js"></script>
+    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+</head>
+<body>
+    <header>
+        <h2>🚀 GitFlow Azure DevOps Extension</h2>
+    </header>
+
+    <div class="toolbar">
+        <fluent-button id="btn-start-feature" appearance="accent">
+            <span class="icon">🛠️</span>
+            <span class="label">Start Feature</span>
+        </fluent-button>
+
+        <fluent-button id="btn-finish-feature">
+            <span class="icon">✅</span>
+            <span class="label">Finish Feature</span>
+        </fluent-button>
+
+        <fluent-button id="btn-start-hotfix" appearance="accent">
+            <span class="icon">🔥</span>
+            <span class="label">Start Hotfix</span>
+        </fluent-button>
+
+        <fluent-button id="btn-finish-hotfix">
+            <span class="icon">🧯</span>
+            <span class="label">Finish Hotfix</span>
+        </fluent-button>
+
+        <fluent-button id="btn-start-release" appearance="accent">
+            <span class="icon">📦</span>
+            <span class="label">Start Release</span>
+        </fluent-button>
+
+        <fluent-button id="btn-finish-release">
+            <span class="icon">🏁</span>
+            <span class="label">Finish Release</span>
+        </fluent-button>
+    </div>
+
+    <main>
+        <div id="result" class="log-box">Waiting for action...</div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

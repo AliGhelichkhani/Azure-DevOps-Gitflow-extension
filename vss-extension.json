@@ -1,31 +1,38 @@
 {
   "manifestVersion": 1,
-  "id": "gitflow-devops-extension",
-  "name": "GitFlow Azure DevOps Extension",
+  "id": "azure-devops-gitflow-extension",
+  "publisher": "AliGhelichkhani",
   "version": "0.0.1",
-  "publisher": "your-publisher-id",
+  "name": "Azure DevOps GitFlow Extension",
+  "description": "Adds GitFlow UI to Azure DevOps Repos",
+  "categories": [ "Azure Repos" ],
   "targets": [
-    { "id": "Microsoft.VisualStudio.Services" }
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
   ],
-  "description": "An example Azure DevOps extension built with .NET Core backend and web frontend.",
   "icons": {
     "default": "icon.png"
   },
-  "files": [
-    {
-      "path": "web",
-      "addressable": true
-    }
-  ],
   "contributions": [
     {
-      "id": "gitflow-hub",
+      "id": "gitflow-repo-tab",
       "type": "ms.vss-web.hub",
-      "targets": [ "ms.vss-web.project-hub-group" ],
+      "targets": [
+        "ms.vss-code-web.code-hub-group"
+      ],
       "properties": {
         "name": "GitFlow",
-        "uri": "web/home.html"
+        "uri": "index.html",
+        "icon": "menu-icon.png"
       }
     }
+  ],
+  "files": [
+    { "path": "index.html", "addressable": true },
+    { "path": "main.js","addressable": true },
+    { "path": "style.css","addressable": true },
+    { "path": "icon.png","addressable": true },
+    { "path": "menu-icon.png", "addressable": true }
   ]
 }

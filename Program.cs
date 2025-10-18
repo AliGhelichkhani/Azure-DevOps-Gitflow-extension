@@ -19,7 +19,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.MapGet("/", context =>
 {
-    context.Response.Redirect("/view/index.html");
+    context.Response.Redirect("index.html");
     return Task.CompletedTask;
 });
 app.UseCors();
