@@ -1,0 +1,31 @@
+{
+  "manifestVersion": 1,
+  "id": "gitflow-devops-extension",
+  "name": "GitFlow Azure DevOps Extension",
+  "version": "0.0.1",
+  "publisher": "your-publisher-id",
+  "targets": [
+    { "id": "Microsoft.VisualStudio.Services" }
+  ],
+  "description": "An example Azure DevOps extension built with .NET Core backend and web frontend.",
+  "icons": {
+    "default": "icon.png"
+  },
+  "files": [
+    {
+      "path": "web",
+      "addressable": true
+    }
+  ],
+  "contributions": [
+    {
+      "id": "gitflow-hub",
+      "type": "ms.vss-web.hub",
+      "targets": [ "ms.vss-web.project-hub-group" ],
+      "properties": {
+        "name": "GitFlow",
+        "uri": "web/home.html"
+      }
+    }
+  ]
+}
